@@ -42,7 +42,7 @@ RUN mkdir -p /workspace/golang
 ENV GOROOT /opt/go
 ENV GOPATH /workspace/golang
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/go/bin
-RUN printf "export GOROOT=/opt/go\nexport GOPATH=/workspace\nexport PATH=$PATH:$GOPATH/bin\n" >> /root/.bashrc
+RUN printf "export GOROOT=/opt/go\nexport GOPATH=/workspace/golang\nexport PATH=$PATH:$GOPATH/bin\n" >> /root/.bashrc
 RUN go get -u github.com/tools/godep
 RUN go get -u github.com/golang/lint/golint
 
